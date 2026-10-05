@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>芯片科普｜苹果A/M/S系列 & 三星S5L</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:"Microsoft YaHei",system-ui,sans-serif;
+        }
+        body{
+            background-color:#f0f4f8;
+            padding:24px 16px;
+        }
+        h1{
+            text-align:center;
+            color:#1d2129;
+            margin-bottom:12px;
+            font-size:28px;
+        }
+        .desc{
+            text-align:center;
+            color:#4e5969;
+            max-width:900px;
+            margin:0 auto 24px;
+        }
+        .btn-group{
+            max-width:900px;
+            margin:0 auto 30px;
+            text-align:center;
+        }
+        .btn{
+            padding:8px 16px;
+            border:none;
+            background:#0066cc;
+            color:#fff;
+            border-radius:8px;
+            cursor:pointer;
+            margin:0 4px;
+        }
+        .container{
+            max-width:1000px;
+            margin:0 auto;
+            display:grid;
+            gap:14px;
+        }
+        .section-title{
+            font-size:22px;
+            color:#222;
+            margin-top:20px;
+            padding-left:10px;
+            border-left:4px solid #0066cc;
+        }
+        .chip-item{
+            background:#fff;
+            border-radius:12px;
+            overflow:hidden;
+            box-shadow:0 2px 8px rgba(0,0,0,0.06);
+        }
+        .chip-header{
+            padding:14px 18px;
+            background:#f7faff;
+            cursor:pointer;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            font-weight:bold;
+            font-size:18px;
+            color:#0066cc;
+        }
+        .chip-header:hover{
+            background:#eef7ff;
+        }
+        .chip-body{
+            padding:0 18px;
+            max-height:0;
+            overflow:hidden;
+            transition:all 0.35s ease;
+        }
+        .chip-body.open{
+            padding:18px;
+            max-height:2000px;
+        }
+        .chip-body p{
+            color:#333842;
+            line-height:1.7;
+            font-size:15px;
+            margin-bottom:12px;
+        }
+        .tag-group{
+            display:flex;
+            flex-wrap:wrap;
+            gap:8px;
+            margin-top:14px;
+        }
+        .tag{
+            padding:4px 10px;
+            border-radius:20px;
+            font-size:12px;
+            background:#eef7ff;
+            color:#0066cc;
+        }
+    </style>
+</head>
+<body>
+    <h1>芯片科普大全｜苹果A / M / S系列 & 三星S5L</h1>
+    <p class="desc">点击芯片名称展开/收起详情；支持一键全部展开、全部收起</p>
+    <div class="btn-group">
+        <button class="btn" id="openAll">全部展开</button>
+        <button class="btn" id="closeAll">全部收起</button>
+    </div>
+    <div class="container">
+        <div class="section-title">三星 S5L 系列（苹果早期iPhone、iPod使用芯片）</div>
+
+        <div class="chip-item">
+            <div class="chip-header">三星 S5L8900 <span>+</span></div>
+            <div class="chip-body">
+                <p>三星S5L8900是初代iPhone（2007）搭载处理器，也是苹果手机历史第一款芯片，由三星设计并代工，采用90纳米工艺。单核ARM11核心，主频412MHz，GPU为PowerVR MBX Lite，搭配128MB内存，运行初代iPhone OS。当年苹果还没有自研芯片能力，整套芯片方案由三星提供。这颗芯片最大的历史意义，就是在移动设备上实现流畅多点触控，手指直接缩放网页、照片，不需要触控笔，开启现代智能手机时代。芯片负责基础UI渲染、图片解码、音乐播放、网页浏览，性能放在今天非常弱，但在2007年属于划时代移动芯片。</p>
+                <div class="tag-group">
+                    <span class="tag">90nm</span>
+                    <span class="tag">ARM11单核</span>
+                    <span class="tag">初代iPhone</span>
+                    <span class="tag">2007</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chip-item">
+            <div class="chip-header">三星 S5L8920（S5L8920X） <span>+</span></div>
+            <div class="chip-body">
+                <p>三星S5L8920（S5L8920X）搭载iPhone 3GS，发布2009年，升级65纳米工艺，架构更换为ARM Cortex-A8，主频600MHz，GPU升级PowerVR SGX535，内存提升至256MB。CPU性能相比S5L8900大幅提升，首次在iPhone支持视频录制、相机实时自动对焦、高分辨率图片处理。网页加载速度明显变快，3D图形能力增强，可以运行简单3D游戏。65nm工艺很好控制发热，主频提升之后手机续航没有明显下降。S5L8920是苹果最后一代完整采购三星成品SoC，从这一代之后苹果开始深度自研A系列芯片。</p>
+                <div class="tag-group">
+                    <span class="tag">65nm</span>
+                    <span class="tag">Cortex-A8</span>
+                    <span class="tag">iPhone3GS</span>
+                    <span class="tag">2009</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chip-item">
+            <div class="chip-header">三星 S5L8922（S5L8922X） <span>+</span></div>
+            <div class="chip-body">
+                <p>S5L8922，也叫S5L8922X，2009年发布，搭载iPod touch第3代。和iPhone3GS的S5L8920同源，同为65nm，Cortex‑A8单核600MHz，PowerVR SGX535 GPU，256MB内存。硬件规格接近S5L8920，但针对iPod touch的无摄像头、便携多媒体场景微调，优化音频解码与2D界面渲染。不支持蜂窝基带，只保留WiFi、蓝牙。可以流畅运行iOS3，支持App Store早期3D游戏。是iPod touch最后一代三星S5L系列芯片，之后iPod touch改用苹果自研A系列芯片。</p>
+                <div class="tag-group">
+                    <span class="tag">65nm</span>
+                    <span class="tag">Cortex-A8</span>
+                    <span class="tag">iPod touch 3代</span>
+                    <span class="tag">2009</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chip-item">
+            <div class="chip-header">三星 S5L8930（A4前身） <span>+</span></div>
+            <div class="chip-body">
+                <p>S5L8930是三星代工、苹果参与设计的过渡芯片，主要用于初代iPad，是A4芯片的原型版本，45nm工艺，单核Cortex-A8，主频1GHz。苹果开始深度参与芯片架构定义，三星只负责晶圆制造。相比S5L8920，缓存、总线带宽优化，为平板大屏幕做图形渲染优化，支持更高分辨率屏幕输出。这颗芯片标志苹果从直接买三星成品芯片，转向自己定义芯片架构，是A系列自研芯片的重要过渡产品。</p>
+                <div class="tag-group">
+                    <span class="tag">45nm</span>
+                    <span class="tag">过渡自研</span>
+                    <span class="tag">初代iPad</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-title">苹果 A系列芯片｜iPhone / iPad移动端（含iPad Pro X后缀）</div>
+
+        <div class="chip-item">
+            <div class="chip-header">Apple A4 <span>+</span></div>
+            <div class="chip-body">
+                <p>A4发布2010，苹果第一款自主架构设计SoC，三星45nm代工，单核Cortex-A8，主频最高1GHz，搭配PowerVR SGX535 GPU，搭载iPhone4、初代iPad。A4标志苹果摆脱三星整套芯片方案，苹果掌握芯片架构定义权，三星只负责生产。芯片专门针对iPhone4视网膜高分屏优化，高清画面渲染流畅，支持多任务后台、高清视频硬解码。功耗控制相比前代S5L芯片更强，iPhone4高分辨率屏幕下续航表现稳定。A4奠定苹果自研芯片路线，是苹果芯片时代真正起点。</p>
+                <div class="tag-group">
+                    <span class="tag">45nm</span>
+                    <span class="tag">首款苹果自研SoC</span>
+                    <span class="tag">iPhone4</span>
+                    <span class="tag">2010</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chip-item">
+            <div class="chip-header">Apple A5 <span>+</span></div>
+            <div class="chip-body">
+                <p>A5发布2011，搭载iPhone4S、iPad2，苹果首款双核处理器，45nm工艺，双核Cortex-A9，双核PowerVR SGX543 GPU。CPU性能相比A4提升2倍，图形性能提升7倍。A5让iPhone第一次流畅运行Siri语音助手，支持实时语音运算。双核架构带来更强多任务能力，可以一边播放视频一边浏览网页。后期改版A5采用32nm工艺，进一步降低功耗发热。iPad2依靠A5在轻薄机身下流畅运行3D游戏，A5证明苹果自研双核架构实力，iOS大量新功能都依托A5算力落地。</p>
+                <div class="tag-group">
+                    <span class="tag">45nm/32nm</span>
+                    <span class="tag">苹果首款双核</span>
+                    <span class="tag">iPhone4S</span>
+                    <span class="tag">2011</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chip-item">
+            <div class="chip-header">Apple A5X <span>+</span></div>
+            <div class="chip-body">
+                <p>A5X发布2012，专为初代iPad（第3代）视网膜大屏打造，A5的增强版本。双核Cortex-A9，四核PowerVR SGX543MP4 GPU，45nm工艺。GPU核心数量直接翻倍，专门应对iPad 3代2048×1536视网膜屏幕的巨大渲染压力。CPU规格和A5接近，重点强化图形带宽，支持高分辨率UI、图片、网页渲染。代价是发热与功耗更高，iPad3续航相比iPad2小幅下降。A5X是苹果第一款X后缀平板增强芯片，确立X系列为iPad Pro大屏高性能分支。</p>
+                <div class="tag-group">
+                    <span class="tag">45nm</span>
+                    <span class="tag">iPad视网膜初代</span>
+                    <span class="tag">iPad 3代</span>
+                    <span class="tag">2012</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chip-item">
+            <div class="chip-header">Apple A6 <span>+</span></div>
+            <div class="chip-body">
+                <p>A6发布2012，iPhone5搭载，苹果第一款自研CPU核心（Swift架构），不再使用ARM标准Cortex核心，32nm工艺，双核1.3GHz，搭配三核PowerVR SGX543MP3 GPU。CPU性能相比A5提升两倍，图形性能大幅增强，应用启动速度、网页渲染速度明显提升。苹果第一次自己设计CPU微架构，不再直接拿ARM公版内核，是苹果芯片自研路上重要里程碑。A6支持1080p视频解码，相机连拍性能大幅提升，iPhone5轻薄机身下性能飞跃。</p>
+                <div class="tag-group">
+                    <span class="tag">32nm</span>
+                    <span class="tag">Swift自研CPU</span>
+                    <span class="tag">iPhone5</span>
+                    <span class="tag">2012</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chip-item">
+            <div class="chip-header">Apple A6X <span>+</span></div>
+            <div class="chip-body">
+                <p>A6X发布2012，iPad第4代专用，A6的平板增强版。自研Swift双核CPU，四核PowerVR SGX554MP4 GPU，32nm工艺。相比A5X，CPU架构升级，GPU性能继续提升，同样服务视网膜2K屏幕。CPU性能比A5X提升约2倍，图形性能提升一倍，支持更流畅网页、高清视频和游戏。是最后一代32位X系列芯片，下一代A7X直接进入64位时代。</p>
+                <div class="tag-group">
+                    <span class="tag">32nm</span>
+                    <span class="tag">iPad 4代</span>
+                    <span class="tag">2012</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chip-item">
+            <div class="chip-header">Apple A7 <span>+</span></div>
+            <div class="chip-body">
+                <p>A7发布2013，iPhone5s搭载，**全球第一款量产64位移动处理器**，28nm工艺，双核Cyclone自研架构，搭配M7运动协处理器。M7协处理器单独持续采集陀螺仪、加速度计数据，不需要唤醒主芯片，节省电量。A7支持OpenGL ES3.0，手机3D画面能力升级，照片HDR实时处理能力变强。A7是移动芯片史上里程碑，直接推动整个手机行业全面转向64位架构。iOS7大量毛玻璃虚化、动画特效都依靠A7强大算力。</p>
+                <div class="tag-group">
+                    <span class="tag">28nm</span>
+                    <span class="tag">全球首款64位手机芯片</span>
+                    <span class="tag">iPhone5s</span>
+                    <span class="tag">2013</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chip-item">
+            <div class="chip-header">Apple A7X <span>+</span></div>
+            <div class="chip-body">
+                <p>A7X发布2013，iPad Air初代，A7的平板增强型号。双核Cyclone，八核PowerVR G6430 GPU，28nm工艺。64位架构，GPU核心大幅增加，性能比A7提升一倍以上。为iPad Air轻薄机身+视网膜屏优化，兼顾性能和功耗，相比厚重的iPad4，整机发热控制改善。开启iPad Air轻薄高性能平板路线。</p>
+                <div class="tag-group">
+                    <span class="tag">28nm</span>
+                    <span class="tag">iPad Air 1代</span>
+                    <span class="tag">2013</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chip-item">
+            <div class="chip-header">Apple A8 <span>+</span></div>
+            <div class="chip-body">
+                <p>A8发布2014，iPhone6/6Plus搭载，台积电20nm工艺，双核Typhoon架构，GPU升级PowerVR GX6450，搭配M8运动协处理器。晶体管数量达到20亿，相比A7图形性能提升50%。芯片针对大屏iPhone6优化，支持更高分辨率画面渲染，支持慢动作视频拍摄。M8协处理器新增气压计数据处理，可以测量海拔高度。A8功耗控制优秀，在大屏手机上平衡性能与续航，大量移动端3D游戏在A8上获得更好画质表现。</p>
+                <div class="tag-group">
+                    <span class="tag">20nm</span>
+                    <span class="tag">M8协处理器</span>
+                    <span class="tag">iPhone6</span>
+                    <span class="tag">2014</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chip-item">
+            <div class="chip-header">Apple A8X <span>+</span></div>
+            <div class="chip-body">
+                <p>A8X发布2014，iPad Air 2，苹果首款三核移动处理器，三核Typhoon，八核PowerVR GX6850 GPU，20nm台积电。CPU三核设计，GPU规格大幅增强，性能远超手机版A8。支持4K视频解码，是当年平板性能天花板。三核架构让多任务、大型游戏、图像编辑能力大幅提升，iPad Air2也被称为长寿钉子户平板。</p>
+                <div class="tag-group">
+                    <span class="tag">20nm</span>
+                    <span class="tag">三核CPU</span>
+                    <span class="tag">iPad Air 2</span>
+                    <span class="tag">2014</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chip-item">
+            <div class="chip-header">Apple A9 <span>+</span></div>
+            <div class="chip-body">
+                <p>A9发布2015，iPhone6s/6sPlus搭载，采用双代工方案（台积电16nm & 三星14nm），双核Twister架构，GPU为PowerVR GT7600，搭配M9协处理器。CPU性能相比A8提升70%，图形性能提升90%，支持4K视频录制。M9协处理器可以持续唤醒Siri，实现“嘿 Siri”语音唤醒功能，不需要手动点亮屏幕。A9支持实时照片（Live Photo）图像运算，拍照、视频性能大幅升级，A9性能足够长期流畅使用，很多6s机型服役多年。</p>
+                <div class="tag-group">
+                    <span class="tag">14nm/16nm</span>
+                    <span class="tag">支持4K录像</span>
+                    <span class="tag">iPhone6s</span>
+                    <span class="tag">2015</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chip-item">
+            <div class="chip-header">Apple A9X <span>+</span></div>
+            <div class="chip-body">
+                <p>A9X发布2015，初代12.9英寸iPad Pro，A9的专业平板增强芯片。双核Twister，12核PowerVR GT7600 GPU，台积电16nm。GPU规模巨大，内存带宽大幅提升，为初代iPad Pro超大屏幕、外接键盘、Apple Pencil实时低延迟渲染做优化。桌面级多任务、大型3D游戏、4K视频剪辑都可以流畅运行，是苹果第一款真正意义上的专业平板芯片。</p>
+                <div class="tag-group">
+                    <span class="tag">16nm</span>
+                    <span class="tag">初代iPad Pro 12.9</span>
+                    <span class="tag">Apple Pencil初代</span>
+                    <span class="tag">2015</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chip-item">
+            <div class="chip-header">Apple A10 Fusion <span>+</span></div>
+            <div class="chip-body">
+                <p>A10 Fusion发布2016，iPhone7/7Plus搭载，台积电16nm工艺，苹果第一款大小核架构芯片：2颗高性能核心+2颗低功耗核心，GPU为PowerVR GT7600 Plus，搭配M10协处理器。大小核设计，轻量任务只用低功耗核心省电，游戏、视频等重载任务开启高性能核心。A10性能相比A9提升40%，支持更广色域图像处理，相机人像模式依靠A10实时图像分割运算。A10也是苹果最后一代使用PowerVR第三方GPU的手机芯片。</p>
+                <div class="tag-group">
+                    <span class="tag">16nm</span>
+                    <span class="tag">首款大小核CPU</span>
+                    <span class="tag">iPhone7</span>
+                    <span class="tag">2016</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chip-item">
+            <div class="chip-header">Apple A10X Fusion <span>+</span></div>
+            <div class="chip-body">
+                <p>A10X Fusion发布2017，第二代iPad Pro（10.5寸+12.9寸）。6核大小核架构（3性能+3能效），12核PowerVR GT7600 Plus GPU，台积电10nm。相比手机A10，CPU核心数量增加，GPU规模、内存带宽大幅升级。支持4K60帧硬解码，Apple Pencil第二代低延迟，多任务性能大幅提升。也是最后一代PowerVR GPU的X系列芯片，下一代A12X换成苹果自研GPU。</p>
+                <div class="tag-group">
+                    <span class="tag">10nm</span>
+                    <span class="tag">iPad Pro 2代</span>
+                    <span class="tag">2017</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chip-item">
+            <div class="chip-header">Apple A11 Bionic <span>+</span></div>
+            <div class="chip-body">
+                <p>A11仿生发布2017，iPhone8、8P、iPhone X使用，台积电10nm工艺，6核CPU（2性能+4能效），苹果首款自研GPU，内置第一代神经网络引擎，每秒6000亿次AI运算。A11彻底抛弃PowerVR，GPU完全自研。iPhone X面容ID人脸解锁、人像模式深度图像计算全部依靠A11神经网络引擎实时运算。A11是苹果芯片AI时代开端，首次在手机SoC内置独立AI硬件单元，支持实时人像分割、人脸追踪，大量智能摄影功能诞生于此。</p>
+                <div class="tag-group">
+                    <span class="tag">10nm</span>
+                    <span class="tag">初代神经网络引擎</span>
+                    <span class="tag">iPhone X</span>
+                    <span class="tag">2017</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chip-item">
+            <div class="chip-header">Apple A12 Bionic <span>+</span></div>
+            <div class="chip-body">
+                <p>A12仿生发布2018，iPhone XS、XS Max、XR搭载，台积电7nm工艺，6核CPU，4核自研GPU，第二代神经网络引擎，每秒5万亿次AI运算。7nm工艺相比A11大幅降低功耗发热，AI算力提升巨大。支持实时人像虚化调节、智能HDR照片处理、AR增强现实实时场景运算。A12的媒体引擎升级，视频编码效率提升，AR应用渲染更加流畅。A12是苹果第一代7nm手机芯片，能效比飞跃，很多用户称A12为耐用钉子户芯片。</p>
+                <div class="tag-group">
+                    <span class="tag">7nm</span>
+                    <span class="tag">第二代NPU</span>
+                    <span class="tag">iPhone XS</span>
+                    <span class="tag">2018</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chip-item">
+            <div class="chip-header">Apple A12X Bionic <span>+</span></div>
+            <div class="chip-body">
+                <p>A12X Bionic发布2018，第三代iPad Pro（11寸+12.9寸）。8核CPU（4性能+4能效），7核自研GPU，台积电7nm，第二代神经网络引擎。相比手机A12，CPU增加2颗核心，GPU规模大幅扩大，内存带宽提升巨大。是苹果首款8核移动端SoC，性能接近早期笔记本。支持USB‑C、Apple Pencil二代低延迟，可剪辑多路4K视频，大量PC级App移植iPad。</p>
+                <div class="tag-group">
+                    <span class="tag">7nm</span>
+                    <span class="tag">iPad Pro 3代</span>
+                    <span class="tag">8核CPU</span>
+                    <span class="tag">2018</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chip-item">
+            <div class="chip-header">Apple A12Z Bionic <span>+</span></div>
+            <div class="chip-body">
+                <p>A12Z Bionic发布2020，第四代iPad Pro。本质是A12X的良率解锁版本，8核CPU，8核GPU（A12X屏蔽1颗GPU，A12Z全部开启），7nm工艺，NPU规格不变。GPU核心全开，3D渲染性能更强，为LiDAR激光雷达传感器做硬件适配，支持AR空间扫描。性能和A12X接近，主要优势是完整GPU与雷达配套算力，也是最后一代A系列X后缀芯片，后续iPad Pro改用M系列。</p>
+                <div class="tag-group">
+                    <span class="tag">7nm</span>
+                    <span class="tag">LiDAR雷达支持</span>
+                    <span class="tag">iPad Pro 4代</span>
+                    <span class="tag">2020</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chip-item">
+            <div class="chip-header">Apple A13 Bionic <span>+</span></div>
+            <div class="chip-body">
+                <p>A13仿生发布2019，iPhone11全系列搭载，台积电7nm增强版工艺，6核CPU，4核GPU，第三代神经网络引擎，每秒8万亿次AI算力。CPU、GPU性能小幅提升，重点优化AI计算单元。A13支持新一代计算摄影，多帧合成智能HDR，暗光照片降噪能力大幅提升。支持4K60帧视频录制，视频防抖实时运算。芯片功耗优化非常出色，iPhone11系列续航相比前代明显提升，游戏长时间运行发热控制更好。</p>
+                <div class="tag-group">
+                    <span class="tag">7nm+</span>
+                    <span class="tag">第三代NPU</span>
+                    <span class="tag">iPhone11</span>
+                    <span class="tag">2019</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chip-item">
+            <div class="chip-header">Apple A14 Bionic <span>+</span></div>
+            <div class="chip-body">
+                <p>A14仿生发布2020，iPhone12系列，**全球首款量产5nm手机芯片**，晶体管118亿，6核CPU，4核GPU，16核神经网络引擎，每秒11万亿次AI运算。A14支持5G基带搭配使用，GPU支持移动端光线追踪基础硬件。照片深度融合技术依靠A14神经网络引擎多张照片实时合成降噪，暗光拍照提升巨大。5nm工艺大幅降低漏电，iPhone12加入5G之后依旧维持不错续航。A14代表移动芯片正式进入5nm时代，能效比达到全新高度。</p>
+                <div class="tag-group">
+                    <span class="tag">5nm</span>
+                    <span class="tag">全球首款5nm手机芯片</span>
+                    <span class="tag">iPhone12</span>
+                    <span class="tag">2020</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chip-item">
+            <div class="chip-header">Apple A15 Bionic <span>+</span></div>
+            <div class="chip-body">
+                <p>A15仿生发布2021，iPhone13全系，台积电5nm增强工艺。标准版4核GPU，Pro版本升级5核GPU，6核CPU，16核神经网络引擎，算力15.8万亿次每秒。A15 GPU性能提升巨大，游戏帧率稳定性极强，电影效果模式视频虚化依靠芯片实时运算。媒体引擎增强，支持4K60帧ProRes视频录制。A15功耗控制极其优秀，iPhone13系列成为口碑很强的长续航机型。A15性能余量巨大，日常、游戏、视频剪辑都无压力，是公认的钉子户芯片。</p>
+                <div class="tag-group">
+                    <span class="tag">5nm增强</span>
+                    <span class="tag">电影效果模式</span>
+                    <span class="tag">iPhone13</span>
+                    <span class="tag">2021</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chip-item">
+            <div class="chip-header">Apple A16 Bionic <span>+</span></div>
+            <div class="chip-body">
+                <p>A16仿生发布2022，iPhone14 Pro / Pro Max搭载，台积电4nm工艺，6核CPU，5核GPU，16核神经网络引擎。CPU架构小幅优化，重点升级图像信号处理器ISP，支持4800万像素传感器实时处理，照片细节捕捉能力提升。A16支持灵动岛UI实时渲染运算，全天候显示屏控制器集成在芯片周边。视频编码进一步优化，运动模式视频防抖效果更强。A16主打计算摄影升级，性能提升幅度偏向影像处理而非原始跑分。</p>
+                <div class="tag-group">
+                    <span class="tag">4nm</span>
+                    <span class="tag">4800万像素处理</span>
+                    <span class="tag">iPhone14Pro</span>
+                    <span class="tag">2022</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chip-item">
+            <div class="chip-header">Apple A17 Pro <span>+</span></div>
+            <div class="chip-body">
+                <p>A17 Pro发布2023，iPhone15 Pro / Pro Max，苹果首款3nm手机芯片，台积电N3工艺。6核CPU，6核自研GPU，硬件级光线追踪、网格着色器，支持主机级游戏。16核神经网络引擎，AI算力进一步提升。A17 Pro的GPU是苹果移动端最大升级，硬件光追让手机可以运行《生化危机》这类主机移植大作。配套USB-C高速媒体引擎，支持外录ProRes视频。空间视频拍摄依靠A17 Pro实时处理，3nm工艺让芯片高负载发热控制更好。</p>
+                <div class="tag-group">
+                    <span class="tag">3nm</span>
+                    <span class="tag">硬件光追</span>
+                    <span class="tag">iPhone15Pro</span>
+                    <span class="tag">2023</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chip-item">
+            <div class="chip-header">Apple A18 <span>+</span></div>
+            <div class="chip-body">
+                <p>A18发布2024，iPhone16标准版搭载，台积电N3E增强3nm工艺。6核CPU（2性能+4能效），5核GPU，16核神经网络引擎，针对Apple Intelligence苹果端侧大模型深度优化。芯片强化本地AI运算能力，手机可以离线完成AI图像生成、文本总结、智能修图。GPU优化光线追踪性能，游戏渲染速度提升。媒体处理单元升级，支持更高规格视频编码解码，相机智能处理响应速度更快。A18是苹果AI时代标准版手机芯片，重点兼顾能效与日常AI任务。</p>
+                <div class="tag-group">
+                    <span class="tag">3nm增强</span>
+                    <span class="tag">Apple Intelligence</span>
+                    <span class="tag">iPhone16</span>
+                    <span class="tag">2024</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chip-item">
+            <div class="chip-header">Apple A18 Pro <span>+</span></div>
+            <div class="chip-body">
+                <p>A18 Pro发布2024，iPhone16 Pro / Pro Max搭载，台积电N3E增强3nm工艺。6核CPU（2性能+4能效），6核GPU，16核神经网络引擎，针对Apple Intelligence苹果端侧大模型深度优化。芯片强化本地AI运算能力，手机可以离线完成AI图像生成、文本总结、智能修图。GPU继续优化光线追踪性能，游戏渲染速度提升。媒体处理单元升级，支持更高规格视频编码解码，相机智能处理响应速度更快。A18 Pro GPU规格更高，重载游戏、4K/ProRes视频剪辑性能更强。</p>
+                <div class="tag-group">
+                    <span class="tag">3nm增强</span>
+                    <span class="tag">Apple Intelligence</span>
+                    <span class="tag">iPhone16 Pro</span>
+                    <span class="tag">2024</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 新增独立卡片 A19 -->
+        <div class="chip-item">
+            <div class="chip-header">Apple A19 <span>+</span></div>
+            <div class="chip-body">
+                <p>A19发布2025年9月，搭载iPhone 17标准版，台积电第三代3nm工艺。6核CPU，包含2颗性能核心与4颗能效核心，5核自研GPU，GPU集成神经网络加速器，搭配新一代16核神经网络引擎。相比A18，CPU与GPU性能同步提升，本地Apple Intelligence推理速度明显加快，支持Visual Intelligence屏幕视觉识别、离线AI文本处理。媒体引擎升级，支持新一代Pro Fusion双摄系统实时图像运算，4800万像素主摄、超广角的多帧合成、智能色彩处理全部由A19实时完成。GPU强化移动端3A游戏渲染，兼顾功耗，维持iPhone17标准版优秀续航，视频最长播放可达30小时。</p>
+                <div class="tag-group">
+                    <span class="tag">第三代3nm</span>
+                    <span class="tag">GPU内置神经网络加速器</span>
+                    <span class="tag">iPhone 17</span>
+                    <span class="tag">2025</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 新增独立卡片 A19 Pro -->
+        <div class="chip-item">
+            <div class="chip-header">Apple A19 Pro <span>+</span></div>
+            <div class="chip-body">
+                <p>A19 Pro发布2025年9月，搭载iPhone 17 Pro、iPhone 17 Pro Max以及iPhone Air，台积电第三代3nm工艺。6核CPU（2性能+4能效），升级6核自研GPU，GPU集成神经网络加速器，搭配新一代16核神经网络引擎。相比A19标准版多1颗GPU核心，搭配iPhone17 Pro系列VC均热板散热，持续性能最高较A18 Pro提升40%。专门为三颗4800万像素Pro Fusion三摄系统做硬件优化，支持8倍光学品质变焦、ProRes RAW、Apple Log 2专业视频编码。本地Apple Intelligence算力大幅增强，大型本地大模型运行速度提升，Visual Intelligence、AI图像清除等功能响应更快。硬件光追进一步优化，支持高画质移动端3A大作长时间稳定运行，是苹果史上性能最强的iPhone芯片。</p>
+                <div class="tag-group">
+                    <span class="tag">第三代3nm</span>
+                    <span class="tag">GPU内置神经网络加速器</span>
+                    <span class="tag">iPhone17 Pro / 17 Pro Max</span>
+                    <span class="tag">2025</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-title">苹果 M系列芯片｜Mac / iPad Pro桌面级SoC（官方命名）</div>
+
+        <div class="chip-item">
+            <div class="chip-header">Apple M1 <span>+</span></div>
+            <div class="chip-body">
+                <p>M1发布2020，苹果首款自研桌面架构芯片，用于MacBook Air、Mac mini、iPad Pro，台积电5nm工艺。8核CPU（4性能+4能效），8核GPU，16核神经网络引擎。M1采用革命性统一内存架构，CPU、GPU共享同一内存池，大幅降低数据传输延迟。M1直接把Mac从Intel x86架构切换到ARM自研架构，同等性能功耗远低于英特尔处理器，MacBook Air实现无风扇设计还能流畅剪辑4K视频。M1开启苹果M系列时代，重新定义轻薄本性能标准。</p>
+                <div class="tag-group">
+                    <span class="tag">5nm</span>
+                    <span class="tag">统一内存架构</span>
+                    <span class="tag">首款Mac自研芯片</span>
+                    <span class="tag">2020</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chip-item">
+            <div class="chip-header">Apple M1 Pro / M1 Max / M1 Ultra <span>+</span></div>
+            <div class="chip-body">
+                <p>M1 Pro、M1 Max发布2021，M1 Ultra发布2022，用于14寸、16寸MacBook Pro和Mac Studio，延续5nm工艺。M1 Pro最高10核CPU，16核GPU；M1 Max最高10核CPU，32核GPU，内存带宽大幅提升，支持多路8K视频同时剪辑；M1 Ultra采用UltraFusion封装，两颗M1 Max拼接，20核CPU、64核GPU，最高128GB统一内存，面向重度影视后期、3D渲染、大型代码编译。M1系列Pro版本证明ARM架构完全可以胜任高端工作站专业工作流。</p>
+                <div class="tag-group">
+                    <span class="tag">5nm</span>
+                    <span class="tag">UltraFusion封装</span>
+                    <span class="tag">MacBook Pro / Mac Studio</span>
+                    <span class="tag">2021</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chip-item">
+            <div class="chip-header">Apple M2 / M2 Pro / M2 Max / M2 Ultra <span>+</span></div>
+            <div class="chip-body">
+                <p>M2系列发布2022-2023，台积电5nm增强工艺。M2基础版最高8核CPU、10核GPU；M2 Pro最高12核CPU，19核GPU；M2 Max最高12核CPU，38核GPU；M2 Ultra双M2 Max封装，24核CPU、76核GPU。相比M1系列，CPU性能提升18%，GPU提升最高35%，内存带宽增加，媒体引擎升级。M2搭载新款MacBook Air、Mac mini、iPad Pro，架构微调，能效比进一步优化，长时间高负载温度控制更好，兼顾普通创作用户和重度专业创作者。</p>
+                <div class="tag-group">
+                    <span class="tag">5nm增强</span>
+                    <span class="tag">MacBook Air M2</span>
+                    <span class="tag">2022</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chip-item">
+            <div class="chip-header">Apple M3 / M3 Pro / M3 Max <span>+</span></div>
+            <div class="chip-body">
+                <p>M3系列发布2023，苹果首款3nm桌面芯片，用于MacBook Pro、iMac。M3基础版8核CPU，10核GPU；M3 Pro最高12核CPU，18核GPU；M3 Max最高14核CPU，40核GPU。M3系列新增硬件光线追踪与网格着色器，GPU图形能力飞跃，三维渲染、游戏性能大幅提升。新增**动态缓存技术**，GPU可以动态按需分配缓存资源，图形任务效率提升。3nm工艺降低功耗，芯片发热控制优秀，M3 Max面向重度3D建模、8K影视后期、大型计算任务。</p>
+                <div class="tag-group">
+                    <span class="tag">3nm</span>
+                    <span class="tag">硬件光追+动态缓存</span>
+                    <span class="tag">MacBook Pro M3</span>
+                    <span class="tag">2023</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chip-item">
+            <div class="chip-header">Apple M4 <span>+</span></div>
+            <div class="chip-body">
+                <p>M4发布2024，继续使用3nm工艺优化版本，搭载新款iPad Pro、Mac mini。M4拥有10核CPU（4性能+6能效），最高10核GPU，升级新一代神经网络引擎，针对端侧AI大模型做深度优化。统一内存带宽进一步提升，媒体引擎升级，多路视频编码能力增强。M4重点优化AI本地推理速度，支持离线AI绘图、视频智能抠图、文本大模型。iPad Pro搭载M4之后平板性能接近高端Mac，兼顾移动便携与专业创作性能。</p>
+                <div class="tag-group">
+                    <span class="tag">3nm优化</span>
+                    <span class="tag">AI算力增强</span>
+                    <span class="tag">iPad Pro M4</span>
+                    <span class="tag">2024</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chip-item">
+            <div class="chip-header">Apple M5 / M5 Pro / M5 Max / M5 Ultra <span>+</span></div>
+            <div class="chip-body">
+                <p>M5系列（官网无M5m/M5p，民间俗称M5p=M5 Pro、M5m=M5基础版）发布2025，第三代3nm工艺，主打AI算力提升，搭载MacBook Air、MacBook Pro、Apple Vision Pro、Mac Studio。M5基础版：10核CPU（4超级核心+6能效核心），10核GPU；M5 Pro：18核CPU+20核GPU；M5 Max：18核CPU，最高40核GPU；M5 Ultra采用四晶粒UltraFusion封装，是苹果首款四晶粒芯片。GPU每个核心内置独立神经网络加速器，GPU AI峰值算力相比M4提升4倍以上。搭配16核神经网络引擎，支持Apple Intelligence本地大模型。第三代硬件光线追踪，图形性能相比M4提升最高45%。M5 Ultra面向重度AI工作站、超大场景3D渲染。</p>
+                <div class="tag-group">
+                    <span class="tag">3nm第三代</span>
+                    <span class="tag">GPU内置AI加速器</span>
+                    <span class="tag">MacBook Pro M5</span>
+                    <span class="tag">2025</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chip-item">
+            <div class="chip-header">Apple M6 <span>+</span></div>
+            <div class="chip-body">
+                <p>M6是苹果首款2纳米制程芯片，发布2026，首发搭载Mac mini。芯片拥有12核CPU，包含2颗超级核心、4颗性能核心与6颗能效核心，搭配12核GPU，双16核神经网络引擎，统一内存带宽最高170GB/s。相比M5，单线程性能继续刷新世界纪录，多线程性能相比M5提升约20%。GPU每个核心集成神经网络加速器，本地大模型推理、AI绘图、AI视频处理速度大幅提升。2nm工艺带来更高晶体管密度，功耗控制进一步优化。M6代表苹果进入2纳米时代，AI计算能力全面升级。</p>
+                <div class="tag-group">
+                    <span class="tag">2nm</span>
+                    <span class="tag">双神经网络引擎</span>
+                    <span class="tag">Mac mini M6</span>
+                    <span class="tag">2026</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-title">苹果 S系列芯片｜Apple Watch手表芯片</div>
+
+        <div class="chip-item">
+            <div class="chip-header">Apple S1 <span>+</span></div>
+            <div class="chip-body">
+                <p>S1芯片是苹果第一代手表处理器，2014年，初代Apple Watch搭载。S1采用SiP系统级封装设计，把CPU、内存、闪存、各类传感器电路全部封装在单一模块内，工艺是28nm。S1定位超低功耗，专门适配手表狭小机身与有限电池容量。芯片负责手表界面渲染、触控响应、心率读取、消息通知震动处理。受限于当年工艺和手表体积，S1性能偏弱，打开应用加载速度偏慢。S1最大意义是把完整SoC塞进手表狭小机身，开启Apple Watch自研S芯片路线。</p>
+                <div class="tag-group">
+                    <span class="tag">28nm SiP封装</span>
+                    <span class="tag">初代Apple Watch</span>
+                    <span class="tag">2014</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chip-item">
+            <div class="chip-header">Apple S2 <span>+</span></div>
+            <div class="chip-body">
+                <p>S2芯片发布2016，Apple Watch Series2，依旧SiP封装，升级工艺，内置独立GPS处理单元。S2 CPU性能相比S1提升50%，GPU性能翻倍。新增独立GPS信号解码，手表不用携带手机，就可以记录户外跑步轨迹。图形渲染提升，手表界面滑动更流畅，应用加载速度明显改善。芯片保留低功耗设计，日常待机功耗稳定。S2是Apple Watch重要升级，GPS模块集成进S2芯片组，运动用户可以脱离iPhone记录户外健身数据，手表独立运动能力成型。</p>
+                <div class="tag-group">
+                    <span class="tag">内置GPS</span>
+                    <span class="tag">Watch Series2</span>
+                    <span class="tag">2016</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chip-item">
+            <div class="chip-header">Apple S3 <span>+</span></div>
+            <div class="chip-body">
+                <p>S3发布2017，Apple Watch Series3，SiP封装，CPU小幅升级，版本分为GPS版与蜂窝版。蜂窝版本S3内置eSIM基带，可以独立接入移动网络，手表脱离手机接打电话、收发消息。CPU性能小幅提升，功耗优化，待机时间改善。S3芯片可以实时处理气压计高度数据，记录登山海拔变化，心率采样算法优化。S3是苹果第一款支持蜂窝独立联网的手表芯片，让Apple Watch真正具备独立通信能力，很多S3手表长期服役，口碑很强。</p>
+                <div class="tag-group">
+                    <span class="tag">支持eSIM蜂窝</span>
+                    <span class="tag">Watch Series3</span>
+                    <span class="tag">2017</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chip-item">
+            <div class="chip-header">Apple S4 <span>+</span></div>
+            <div class="chip-body">
+                <p>S4发布2018，Apple Watch Series4，架构大换代，64位双核处理器，相比S3速度提升两倍。芯片集成新一代心率信号处理单元，支持心电图ECG信号采集计算，芯片内置硬件模块实时分析心电波形，识别心律不齐。S4驱动手表全面升级大屏幕，图形处理能力增强，屏幕界面刷新更顺滑。芯片运动传感器信号处理算法升级，跌倒检测依靠S4实时加速度与陀螺仪数据判断。S4是手表芯片巨大飞跃，性能翻倍，新增ECG、跌倒检测健康核心功能。</p>
+                <div class="tag-group">
+                    <span class="tag">64位双核</span>
+                    <span class="tag">ECG心电图</span>
+                    <span class="tag">Watch Series4</span>
+                    <span class="tag">2018</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chip-item">
+            <div class="chip-header">Apple S5 <span>+</span></div>
+            <div class="chip-body">
+                <p>S5发布2019，Apple Watch Series5，CPU架构和S4接近，重点升级Always-On常亮显示控制单元。S5内置低功耗显示控制器，手表屏幕可以保持常亮，同时不会大量消耗电量。芯片环境光传感器信号处理优化，屏幕亮度自动调节更顺滑。保留ECG心电图、跌倒检测算力，新增指南针数据实时处理，可以记录方位。S5核心优化方向不是原始算力，而是功耗控制，解决常亮屏幕耗电难题，平衡常亮显示和手表续航。</p>
+                <div class="tag-group">
+                    <span class="tag">常亮显示驱动</span>
+                    <span class="tag">内置指南针处理</span>
+                    <span class="tag">Watch Series5</span>
+                    <span class="tag">2019</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chip-item">
+            <div class="chip-header">Apple S6 <span>+</span></div>
+            <div class="chip-body">
+                <p>S6发布2020，Apple Watch Series6，CPU性能相比S5提升20%，新增血氧传感器信号处理硬件。S6芯片可以处理红光红外光信号，计算血液血氧饱和度，实时输出血氧数值，是健康监测重大升级。芯片传感器采样速度提升，心率、血氧数据采样更快更稳定。GPU小幅优化，界面动画更流畅。S6强化健康计算能力，心率、血氧、心电图多维度健康数据全部在手表本地完成运算，数据保存在手表本地，兼顾隐私和实时计算速度。</p>
+                <div class="tag-group">
+                    <span class="tag">血氧检测处理</span>
+                    <span class="tag">Watch Series6</span>
+                    <span class="tag">2020</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chip-item">
+            <div class="chip-header">Apple S7 <span>+</span></div>
+            <div class="chip-body">
+                <p>S7芯片搭载Apple Watch Series7，2021年，架构延续S6，没有大幅升级CPU算力，重点优化功耗、传感器信号处理与屏幕控制器。S7适配更大尺寸屏幕，屏幕曲率UI渲染优化，屏幕亮度提升，在户外强光下显示效果更好。芯片优化陀螺仪、加速度计采样算法，跌倒检测识别更精准。S7延续S6的ECG、血氧检测能力，健康监测算法迭代。S7芯片设计思路优先保证续航，没有盲目堆高性能，符合手表低功耗需求。</p>
+                <div class="tag-group">
+                    <span class="tag">大尺寸屏幕适配</span>
+                    <span class="tag">Watch Series7</span>
+                    <span class="tag">2021</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chip-item">
+            <div class="chip-header">Apple S8 <span>+</span></div>
+            <div class="chip-body">
+                <p>S8芯片搭载Apple Watch Series8，2022年，架构和S7基本一致，核心新增车祸检测硬件算法单元。S8高速采集三轴陀螺仪、高G加速度计、气压计信号，高速判断车辆撞击事件，触发紧急求助。芯片新增体温传感器信号处理单元，可以监测手腕基础体温数据，用于女性周期估算。其余健康功能如ECG、血氧、跌倒检测全部保留。S8依旧延续低功耗优先思路，不提升CPU原始性能，重点强化安全感知与健康传感器处理能力。</p>
+                <div class="tag-group">
+                    <span class="tag">车祸检测</span>
+                    <span class="tag">体温监测</span>
+                    <span class="tag">Watch Series8</span>
+                    <span class="tag">2022</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chip-item">
+            <div class="chip-header">Apple S9 <span>+</span></div>
+            <div class="chip-body">
+                <p>S9芯片搭载Apple Watch Series9，2023年，苹果手表第一款内置神经网络引擎的芯片。4核NPU，支持本地Siri离线运算，不需要联网就可以执行语音指令。双击手势操作依靠S9神经网络引擎实时识别手部动作，捕捉手腕微小运动变化。芯片CPU性能小幅提升，传感器信号处理速度更快。S9开启Apple Watch本地AI时代，很多语音指令、手势识别直接在手表本地完成，响应速度更快，保护用户隐私。</p>
+                <div class="tag-group">
+                    <span class="tag">内置NPU神经网络引擎</span>
+                    <span class="tag">离线Siri、双击手势</span>
+                    <span class="tag">Watch Series9</span>
+                    <span class="tag">2023</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chip-item">
+            <div class="chip-header">Apple S10 <span>+</span></div>
+            <div class="chip-body">
+                <p>S10芯片搭载Apple Watch Series10，2024年，继续搭载4核神经网络引擎，进一步优化AI手势识别精度，双击手势识别准确率提升，误触减少。S10优化超宽带U1芯片协同运算，精准查找iPhone的信号处理更快。健康传感器信号处理精度提升，心率、血氧采样噪声更低。芯片功耗持续优化，支持手表低功耗模式，延长续航。S10延续S9本地AI架构，继续强化健康监测、手势交互、U1空间感知能力，保持手表低功耗优先设计思路。</p>
+                <div class="tag-group">
+                    <span class="tag">优化4核NPU</span>
+                    <span class="tag">U1超宽带协同</span>
+                    <span class="tag">Watch Series10</span>
+                    <span class="tag">2024</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script>
+// 折叠面板逻辑
+const items = document.querySelectorAll('.chip-item');
+items.forEach(item=>{
+    const header = item.querySelector('.chip-header');
+    const body = item.querySelector('.chip-body');
+    const icon = header.querySelector('span');
+    header.onclick = function(){
+        body.classList.toggle('open');
+        icon.textContent = body.classList.contains('open') ? '-' : '+';
+    }
+})
+// 全部展开
+document.getElementById('openAll').onclick = function(){
+    items.forEach(item=>{
+        const body = item.querySelector('.chip-body');
+        const icon = item.querySelector('.chip-header span');
+        body.classList.add('open');
+        icon.textContent = '-';
+    })
+}
+// 全部收起
+document.getElementById('closeAll').onclick = function(){
+    items.forEach(item=>{
+        const body = item.querySelector('.chip-body');
+        const icon = item.querySelector('.chip-header span');
+        body.classList.remove('open');
+        icon.textContent = '+';
+    })
+}
+</script>
+</body>
+</html>
