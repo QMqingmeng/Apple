@@ -116,13 +116,11 @@
 <body>
     <div class="container">
         <h1>🧠 大脑芯片等级终极测试｜总分200</h1>
-
         <!-- 实时状态区域 -->
         <div class="status-bar">
             <div class="score-text">当前分数：<span id="currentScore">0</span> / 200</div>
             <div class="remain-text">未完成题目：<span id="remainCount">20</span> 题</div>
         </div>
-
         <div id="quizBox" class="card">
             <!-- 题目1 -->
             <div class="q-title">1. 瞬间记忆：听一串8位随机数字，你的复述能力？</div>
@@ -283,10 +281,8 @@
             <label class="option"><input type="radio" name="q20" value="4" onchange="calcScore()"> 懂得灵活变通</label>
             <label class="option"><input type="radio" name="q20" value="6" onchange="calcScore()"> 脑洞极大，独创解法</label>
             <label class="option"><input type="radio" name="q20" value="10" onchange="calcScore()"> 突破框架，设计多种全新方案</label>
-
             <button class="btn" id="submitBtn" disabled>提交，查看你的芯片</button>
         </div>
-
         <!-- 结果卡片 -->
         <div id="result" class="card">
             <h2 style="text-align:center">✅ 测试完成 · 大脑芯片评级</h2>
@@ -296,7 +292,6 @@
             <button class="btn" style="margin-top:20px" onclick="restartTest()">重新测试</button>
         </div>
     </div>
-
 <script>
 const totalQuestion = 20;
 const scoreDom = document.getElementById('currentScore');
@@ -307,7 +302,6 @@ const resultBox = document.getElementById('result');
 const finalScoreDom = document.getElementById('finalScore');
 const chipNameDom = document.getElementById('chipName');
 const chipDescDom = document.getElementById('chipDesc');
-
 const chipData = [
     {min:0,max:4,name:"三星 S5L8900",desc:"初代iPhone单核芯，2007年首款触屏手机处理器。你的大脑属于最原始基础算力，仅能支撑最简单基础思考，复杂任务极易卡顿。"},
     {min:5,max:9,name:"三星 S5L8920",desc:"iPhone 3GS 御用芯片，性能小幅升级。可以流畅完成简单操作，但深度思考、长时记忆很容易过载。"},
@@ -346,10 +340,8 @@ const chipData = [
     {min:188,max:190,name:"Apple M3",desc:"M3基础版，新一代3nm桌面芯片，推理速度与AI算力升级。"},
     {min:191,max:193,name:"Apple M3 Pro",desc:"M3专业版，多核性能提升，适合高强度多任务脑力创作。"},
     {min:194,max:195,name:"Apple M3 Max",desc:"M3高阶专业芯，超大缓存，复杂建模、多维推演能力极强。"},
-    {min:196,max:197,name:"Apple M3 Ultra",desc:"M3架构天花板，超大多核，全局统筹、海量信息并行处理。"},
-    {min:198,max:200,name:"Apple M4 Ultra",desc:"M4架构终极版，海量核心，超强并行全局思考。"}
+    {min:196,max:200,name:"Apple M3 Ultra",desc:"M3架构天花板，超大多核，全局统筹、海量信息并行处理，桌面算力顶点。"}
 ];
-
 // 实时计算分数函数
 function calcScore(){
     let sum = 0;
@@ -366,12 +358,10 @@ function calcScore(){
     // 全部答完，按钮解锁
     submitBtn.disabled = !(answered === totalQuestion);
 }
-
 // 提交按钮点击事件
 submitBtn.onclick = function(){
     let rawScore = Number(scoreDom.innerText);
     finalScoreDom.innerText = rawScore;
-
     let resultChip = chipData.find(item => rawScore >= item.min && rawScore <= item.max);
     if(!resultChip){
         if(rawScore <= chipData[0].max) resultChip = chipData[0];
@@ -379,11 +369,9 @@ submitBtn.onclick = function(){
     }
     chipNameDom.innerText = resultChip.name;
     chipDescDom.innerText = resultChip.desc;
-
     quizBox.style.display = 'none';
     resultBox.style.display = 'block';
 }
-
 // 重置
 function restartTest(){
     let inputs = document.querySelectorAll('input[type="radio"]');
