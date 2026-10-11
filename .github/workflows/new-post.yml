@@ -1,0 +1,50 @@
+name: 新增社区帖子
+on:
+  workflow_dispatch:
+    inputs:
+      post_title:
+        description: 帖子标题
+        required: true
+        type: string
+      post_body:
+        description: 帖子正文
+        required: true
+        type: string
+      post_author:
+        description: 昵称
+        required: true
+        type: string
+
+jobs:
+  add-post:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 拉取仓库代码
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 追加帖子到 posts.json
+        run: |
+          NOW=$(date -Iseconds)
+          NEW_ENTRY=$(jq -n \
+            --arg title "${{ github.event.inputs.post_title }}" \
+            --arg body "${{ github.event.inputs.post_body }}" \
+            --arg author "${{ github.event.inputs.post_author }}" \
+            --arg time "$NOW" \
+            '{title:$title, body:$body, author:$author, time:$time}')
+          # 如果posts.json不存在，新建数组
+          if [ ! -f posts.json ]; then
+            echo "[]" > posts.json
+          fi
+          # 把新帖子插入数组头部（最新帖子在最前面）
+          jq --argjson new "$NEW_ENTRY" '[$new] + .' posts.json > tmp.json && mv tmp.json posts.json
+
+      - name: 提交并推送
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add posts.json
+          git commit -m "社区新增帖子: ${{ github.event.inputs.post_title }}"
+          git push
